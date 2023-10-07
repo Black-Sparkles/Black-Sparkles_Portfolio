@@ -14,5 +14,18 @@
     "mongoose": "^7.6.0",
     "morgan": "~1.9.1",
     "node-sass": "^9.0.0"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Black-Sparkles/Black-Sparkles_Portfolio.git"
+  },
+  "author": "Black-Sparkles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Black-Sparkles/Black-Sparkles_Portfolio/issues"
+  },
+  "homepage": "https://github.com/Black-Sparkles/Black-Sparkles_Portfolio#readme",
+  "description": ""
 }
