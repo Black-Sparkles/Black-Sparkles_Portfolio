@@ -1,0 +1,20 @@
+/* 
+file name: about.css
+name:Habibat Dolapo
+stu ID: 301270896
+date: 06-07-23
+ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #1a1e23;
+}
+
+.container {
+  text-align: center;
+  justify-content: center;
+  background: #1a1e23;
+}

@@ -1,0 +1,196 @@
+body {
+  display: flex;
+  justify-content: center;
+  background: #1a1e23;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Krona One", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #ff6cab;
+
+  font-size: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Krona One", sans-serif;
+  position: relative;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+/* Style for the p element with class "name" */
+.name {
+  font-size: 20px; /* Adjust the font size as needed */
+  color: transparent;
+  background: linear-gradient(45deg, #ff6cab, #ff6699, #b10dc9, #333366);
+  -webkit-background-clip: text; /* Clip text to apply gradient */
+  background-clip: text;
+}
+
+#burger-toggle {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+}
+
+#burger-toggle:checked ~ .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#burger-toggle:checked ~ .menu .menu-nav-link span div,
+#burger-toggle:checked ~ .menu img,
+#burger-toggle:checked ~ .menu .title p {
+  transform: translateY(0);
+  transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
+}
+
+#burger-toggle:checked ~ .menu .image-link:nth-child(1) img {
+  transition-delay: 0.18s;
+}
+
+#burger-toggle:checked ~ .menu .image-link:nth-child(2) img {
+  transition-delay: 0.26s;
+}
+
+#burger-toggle:checked ~ .menu .image-link:nth-child(3) img {
+  transition-delay: 0.34s;
+}
+
+#burger-toggle:checked ~ .menu .image-link:nth-child(4) img {
+  transition-delay: 0.42s;
+}
+
+#burger-toggle:checked ~ .burger-menu .line::after {
+  transform: translateX(0);
+  background-color: #ff6cab;
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(1) {
+  transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(2) {
+  transform: scaleX(0);
+}
+
+#burger-toggle:checked ~ .burger-menu .line:nth-child(3) {
+  transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
+}
+
+.burger-menu {
+  --burger-menu-radius: 4em;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  z-index: 100;
+  display: block;
+  width: var(--burger-menu-radius);
+  height: var(--burger-menu-radius);
+  outline: none;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: hsla(0, 0%, 99%, 0.879);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.burger-menu .line:nth-child(1) {
+  top: 30%;
+}
+
+.burger-menu .line:nth-child(2) {
+  top: 50%;
+}
+
+.burger-menu .line:nth-child(3) {
+  top: 70%;
+}
+
+.burger-menu .line::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color-darker);
+  transform: translateX(-100%);
+  transition: 0.25s;
+}
+
+.burger-menu .line:nth-child(2)::after {
+  transition-delay: 0.1s;
+}
+
+.burger-menu .line:nth-child(3)::after {
+  transition-delay: 0.2s;
+}
+
+.burger-menu:hover .line::after {
+  transform: translateX(0);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1a1e23;
+  opacity: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 750px) {
+  .menu {
+    display: block;
+  }
+}
+
+.menu .title {
+  font-size: 24px;
+  color: white;
+  overflow: hidden;
+}
+
+.menu .title p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: translateY(102%);
+}
+.menu .gallery {
+  margin-top: 60px;
+  text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/x-icon" href="/Assets/icons/favicon.png" />
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+    </style>
+
+  </head>
+  <body>
+    
+<!-- file name: header.css
+name:Habibat Dolapo
+stu ID: 301270896
+date: 06-07-23 -->
+ 
+    <div class="container">
+      <img src="/assets/icons/logo-no-background.svg" class="logo" />
+      <h1>Click on the hamburger.</h1>
+    </div>
+
+    <input type="checkbox" id="burger-toggle" />
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <div class="menu">
+
+      <div class="menu-inner">
+        
+<%- include('./partials/header') %>
+        <div class="gallery">
+          <div class="title">
+            <p>My name is <h5 class="name">Black-Sparkles</h5></p>
+            <p class="name" id="output"></p>
+          </div>
+        </div>
+        </div>
+      </div>
+ 
+
+    <script src="/javascripts/index.js"></script>
+  </body>
+</html>

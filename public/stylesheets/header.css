@@ -1,0 +1,72 @@
+/* 
+file name: header.css
+name:Habibat Dolapo
+stu ID: 301270896
+date: 06-07-23
+ */
+
+body {
+  background: #1a1e23;
+}
+.menu-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly; /* Spacing evenly between menu items */
+  background-color: transparent; /* Transparent background */
+  font-family: "Krona One", sans-serif;
+  font-size: 30px;
+}
+
+.menu-nav-item {
+  position: relative; /* Position for the underline */
+}
+.menu-nav-item img {
+  width: 60px; /* Position for the underline */
+}
+
+/* Style for the menu items */
+.menu-nav-link {
+  text-decoration: none;
+  color: white; /* Text color */
+  padding: 10px 20px; /* Add padding to space out menu items */
+  display: block;
+  position: relative;
+}
+
+/* Style for the pink color line underneath */
+.menu-nav-link {
+  text-decoration: none;
+}
+
+/* Style for link hover */
+.menu-nav-link:hover {
+  text-decoration: none;
+}
+.menu-nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Height of the underline */
+  background-color: #ff6cab;
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: center;
+  transition: transform 0.3s ease; /* Smooth animation for the underline */
+}
+
+/* Hover effect for the pink color line */
+.menu-nav-link:hover::before {
+  transform: scaleX(1); /* Display the underline on hover */
+}
+
+/* Style for the active menu item */
+.menu-nav-item.active .menu-nav-link::before {
+  transform: scaleX(1); /* Display the underline for active item */
+}
+
+/* Spacing around menu items */
+.menu-nav-item {
+  margin: 0 10px;
+}

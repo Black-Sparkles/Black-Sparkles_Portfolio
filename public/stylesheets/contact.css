@@ -1,0 +1,27 @@
+/* style for positioning partials */
+
+/* 
+file name: contact.css
+name:Habibat Dolapo
+stu ID: 301270896
+date: 06-07-23
+ */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Style for the container */
+.container {
+  text-align: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  background: #1a1e23;
+  color: #fff;
+}
